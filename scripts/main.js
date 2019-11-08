@@ -258,9 +258,9 @@ document.onreadystatechange = _ => {
             ys.length = 0;
             // [point_width, point_height] = DEFAULT_POINT_SIZE.map(comp => comp * 8);
             apos = [xcentre, ycentre];
-            ctx.lineWidth = point_width;
-            // ctx.strokeStyle = ctx.fillStyle;
             for (i = 0; i < n; i++) {
+                ctx.lineWidth = point_width;
+                // ctx.strokeStyle = ctx.fillStyle;
                 let hue = (i % 10800) / 10800;
                 ctx.beginPath();
                 ctx.strokeStyle = hslArray2RgbString([hue, 1, 1]);
